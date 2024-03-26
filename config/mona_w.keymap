@@ -7,6 +7,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/rgb.h>
 
 / {
     keymap {
@@ -34,11 +35,11 @@
 
         layer_2 {
             bindings = <
-&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans  &trans  &trans  &trans  &trans  &trans  &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &trans
-&trans  &bt BT_PRV    &bt BT_NXT    &none         &trans  &trans  &trans  &trans  &trans  &trans  &trans         &trans         &trans                 &trans
-&trans  &none         &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans         &trans                        &trans
-&trans                &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans         &trans                        &trans  &trans
-&trans  &trans        &trans                                                      &trans                         &kp F13                       &trans  &mo 2
+&trans  &bt BT_SEL 0     &bt BT_SEL 1                    &bt BT_SEL 2     &trans           &trans  &trans  &trans  &trans  &trans  &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &trans
+&trans  &bt BT_PRV       &bt BT_NXT                      &none            &trans           &trans  &trans  &trans  &trans  &trans  &trans         &trans         &trans                 &trans
+&trans  &rgb_ug RGB_TOG  &rgb_ug RGB_COLOR_HSB(222,0,0)  &rgb_ug RGB_EFR  &rgb_ug RGB_EFF  &trans  &trans  &trans  &trans  &trans  &trans         &trans                        &trans
+&trans                   &trans                          &trans           &trans           &trans  &trans  &trans  &trans  &trans  &trans         &trans                        &trans  &trans
+&trans  &trans           &trans                                                                                    &trans                         &kp F13                       &trans  &mo 2
             >;
         };
     };
